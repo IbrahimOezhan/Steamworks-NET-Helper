@@ -5,6 +5,7 @@ using System.Linq;
 using TemplateTools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Debug = TemplateTools.Debug;
 
 public class SteamworksManager : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class SteamworksManager : MonoBehaviour
             if(ulong.TryParse(s, out ulong res))
             {
                 lobbyID.m_SteamID = res; 
-                Debug.Log(lobbyID.m_SteamID);
+                Debug.Log(lobbyID.m_SteamID.ToString());
                 LobbyJoinRequest(lobbyID);
             }
             else
@@ -102,7 +103,7 @@ public class SteamworksManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError(result.m_eResult);
+            Debug.LogError(result.m_eResult.ToString());
         }
 
         lobbyCreated.Unregister();
@@ -203,7 +204,7 @@ public class SteamworksManager : MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.LogException(e);
+            Debug.LogError(e.Message);
         }
     }
 
@@ -330,7 +331,7 @@ public class SteamLobbyData
         }
         catch (Exception e)
         {
-            Debug.LogException(e);
+            Debug.LogError(e.Message);
         }
     }
 }
