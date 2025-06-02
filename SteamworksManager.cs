@@ -2,10 +2,10 @@ using Steamworks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TemplateTools;
+using IbrahKit;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Debug = TemplateTools.Debug;
+using Debug = IbrahKit.Debug;
 
 public class SteamworksManager : MonoBehaviour
 {
