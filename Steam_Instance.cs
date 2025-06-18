@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class SteamInstance : MonoBehaviour
+public class Steam_Instance : MonoBehaviour
 {
-    public static SteamInstance Instance;
+    public static Steam_Instance Instance;
 
     private void Awake()
     {
